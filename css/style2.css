@@ -1,0 +1,368 @@
+
+ *,
+ *:before,
+ *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif; 
+
+}
+
+.contenedor{
+    padding: 100px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.titulo{
+    color: #646464;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+    
+}
+
+/*header*/
+
+header{
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(to right, hsla(217, 89%, 61%, 0.61), hsla(0, 70%, 47%, 0.615)),url(../img/1.jpg); 
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    margin: 0;
+}
+
+nav{
+    text-align: right;     
+    position: fixed;
+    width: 99%;  
+    padding-top: 20px;
+    
+}
+
+nav >a{
+    color: #fff;
+    font-weight:bold;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 15px;
+    transition: all 0.2s ease;
+    
+}
+
+nav >a:hover{
+    
+    padding: 5px 10px;
+    background: #fff;
+    color: black;
+    border-radius: 15px;
+   }
+
+.nav.active{
+    background: black;
+    padding: 20px 30px 0 0;
+    color: white;
+    height: 35px;
+    padding-right: 20px;
+    z-index: 9999999;
+  
+    }
+
+.nav.active a{
+        color: #fff;
+        background: black;
+        transition: 0.5s ease;
+}
+
+.nav.active a:hover{
+    color: black;
+    background: #fff;
+    border-radius: 15px;
+}
+
+    
+header .textos-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.scroll{
+    height: 0px;
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+}
+
+.textos-header h1{
+    font-size: 50px;
+    color: #ffff;
+}
+
+.textos-header h2{
+    font-size: 30px;
+    color: #ffff;
+    font-weight: 300;
+}
+
+.contenedor-sobre-nosotros{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    
+}
+
+.contenedor-sobre-nosotros img{
+    width: 400px;
+    height: 400px; 
+    margin-right: 20px;   
+    transition: 0.4s ;
+    }
+
+ .contenedor-sobre-nosotros img:hover{
+        transform: scale(1.15); 
+        transition: 0.4s ease;
+        cursor: pointer;
+     }
+    
+
+
+.img-consola{
+    width: 50%;
+    margin-right: 50px;
+}
+.sobre-nosotros .contenido-texto{
+    width: 48%;
+    }
+
+.contenido-texto h3{
+    margin-bottom: 15px;
+    
+}
+
+.contenido-texto h3 span {
+    background: #4d0686;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    margin-right: 5px;
+}
+
+.contenido-texto p {
+    padding: 0 0 30px 15px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+/*Galeria*/
+
+.portafolio{
+    background: #f2f2f2;
+    margin-bottom: 50px;
+    padding: 10px;
+    }
+
+.galeria-port   {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.imagen-port{
+    width: 45%;
+    margin-bottom: 10px;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0,.5)  ;
+}
+
+.imagen-port > img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    display: block;
+    position: relative;
+}
+
+
+.hover-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: hwb(284 15% 44% / 0.43);
+    transition: all 0.5s ease;
+    display: table-column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-galeria p{
+    color: #ffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    text-shadow: 2px 2px hsla(0, 0%, 0%, 0.532);
+    text-align: center;
+    padding-top: 25%;
+    font-weight:600;
+    }
+
+.imagen-port:hover .hover-galeria{
+    transform: scale(1.2);
+}
+
+.hover-galeria a{
+    text-decoration: none;
+}
+
+
+/*CLIENTES*/
+
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 70px;
+}
+
+.cards .card{
+    background: #4d0686;
+    display: flex;
+    width: 40%;
+    height: 200px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .6);
+}
+
+.cards .card img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: block;
+}
+
+.cards .card > .contenido-texto-card{
+    width: 60%;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     
+}
+
+.cards .card > .contenido-texto-card p{
+    font-weight: 100;
+    padding-top: 5px;
+    font-size: 16px;
+} 
+
+/*SERVICIOS*/
+
+.about-services{
+    background: #f2f2f2;
+    padding-bottom: 30px;
+}
+
+.servicio-cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.servicio-ind{
+    width: 30%;
+    text-align: center;
+}
+
+.servicio-ind img{
+    width: 95%;
+    height: 275px;
+    transition:ease-in 0.2s;
+}
+
+.servicio-ind img:hover{
+  transition: ease-in-out 0.3s;
+  transform: scale(1.15);
+}
+
+.servicio-ind h3{
+    margin: 10px 0;
+}
+
+.servicio-ind p{
+ font-weight: 300;  
+}
+
+
+/*FOOTER*/
+
+footer{
+    background: #414141;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding: 100px;
+    border-bottom: 1px solid #ccc;
+}
+
+.content-foo{
+    text-align: center;
+    }
+
+.content-foo h4{
+    color: #fff;
+    border-bottom: 3px solid #af20d3;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    font-size: 20PX;
+}
+
+.content-foo a{
+    color: #ccc;
+    text-decoration: none;
+    font-size: 20px;
+    
+}
+
+.titulo-final{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px;
+    padding: 20px;
+    color: #9e9797;
+}
+    
